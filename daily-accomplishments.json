@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "daily-accomplishments-355718",
+  "private_key_id": "57cd11469999f1145f5437535ad672383cc358af",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDGiFIC/oFbBi0j\n1lsDWeDs3McEUqZ9gkK8nAN04dsbzwm9598GxcAlY9eotIPg3GCVA6lYYkoiK2nF\nu6nKx8QnDlHFreYICekiDLIssh8LkfnyNhNCwR2bp2G8v+e8ZH9ctsTznTAjaI9j\nUwrXaPmBuEYX9173iWht7xwjIBH5tu7Qt5GwhUUUPxskQ+ZrtWSEUSPWWIAiWbYJ\nWtynM24fBv0mTnbVtKmiVvwulHiEMhs1RST/iftW0nobJ8op6oK9QM8j3EKyxr6a\nawJ4D/Nib4prYq9Gj1s2pigxq2oowXEGMqHiahvSaiAQXFVJidTQC7JrjzkwBokK\nEnecCCt7AgMBAAECggEAWJ0YHgYDLuG+3DQdQ42me5K/sgpCDdtKdm0cjdsRtYPf\n0UfhoGA7t3StGbwY8RDsexa7S5vzgvTlrUBqNPydbOFTVmycNBJYYL5R+Ok4Oi3Z\n5maEilMwJ/25/kmZ4djpkDR0DFio1+UfuzGhsSxF0cSyZJghZ1OJrSgA4xy5aT+Y\nLqCA6usWL6LLmUKSg/NTTxoH2kUP4XPn3q3/GVr3VLWNM7rzn+qk1OaqovLTi00S\nrwTpnP0L0rErpe+X4kz8b0Y1GcCiqDHgIaMroK1WvyV4Qftnssf+Z/EKPJkWQDaA\nPrDfBtWa/anBLRZ4xRBh/6Soj3iiP1QP1ouJO9A7oQKBgQDtGc/1TYU1XysDvPZe\nc5CP9NoVcCzbIGwJbgMbSNTssUiZbVOrLo1QQKunUdS77IUCNf/ZSM9PaRwiVwvu\nVT0LxEvYKOrMpRsol+omZIwjjvklo27hTx7SGtVQysZP+F6O9FFdf0PvQu4QqRsW\n48d5+IFt36K6XIAvMXCxsdYrNwKBgQDWW39mzB+piRoneIq5TlAaufxea6iQDUW0\nAWeHDdZBcLYleG1OaSxHSY3uLNSLJSpm/XQyzspG+R2XK4YNLEFgdhStU+DvRb7W\nJTNYUHy16s9HjkPiSTd3FL/YKGE+g5bc+8gDPlEuP0dry3IPoiJ9bYSqPQJt4jUJ\n+XAr28KL3QKBgCmWOHKXOUEmQx4xu6jPblDBqqrN9SAuLKTuxd64RJiLc+dtVJqW\n3LRx02nSoZSgpKfBnvGWor4T+ppPWElibAWvVXpBmwVwBDZ3httbEXV/M1YVt3IP\ndaF2kWnNV0FZmARM+CSFGP5TZ/xGHPlD1I4hN1p1Ok6jwNwGOPUB80W7AoGBAIgj\nznNkWwuattCwvzJXqYp/6uew6nqq40UiyzS8NgKT6is8I/fz1hpkfc7yC/9fmGGW\nwXDvYwrWdtOm4dmF7POtqw42QprUqhJpyAVkAQCs4/6nPTf/lkl8FSfc5X4FpxAs\nnOhqcLa1m8+7g3KoX81XfDV+0Acn7tWp5XMFfLbFAoGBAMFsMzpJS5J9Pc3xaF65\nC8LCMDaryaq7T97zWXJZTAKztadeznpee2Cow0jiato/QExL7udQLPdjewGfo2BJ\nJ/qsqZ1rJvxUDV4MK5YPaShu80JF6a64sv0dyLy8TbTAflDRuXqhtp+PEBEiQ4Eu\nuohDVHBq+mfAa6shrESeIK34\n-----END PRIVATE KEY-----\n",
+  "client_email": "james-drabisnky@daily-accomplishments-355718.iam.gserviceaccount.com",
+  "client_id": "105069918158207782575",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/james-drabisnky%40daily-accomplishments-355718.iam.gserviceaccount.com"
+}
