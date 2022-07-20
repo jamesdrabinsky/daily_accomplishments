@@ -1,3 +1,4 @@
+import argparse
 from datetime import date
 
 import gspread
@@ -31,7 +32,7 @@ def list_accomplishments():
     return "\n".join(items)
 
 
-def update_sheet():
+def update_current_day():
     client = google_client()
     sheet = client.open("Daily Accomplishments").get_worksheet(0)
     max_row = sheet.row_count
@@ -40,7 +41,20 @@ def update_sheet():
     sheet.update_acell(f"B{n}", list_accomplishments())
 
 
+def delete_accomplishments(target_date: str):
+    client = google_client()
+    sheet = client.open("Daily Accomplishments").get_worksheet(0)
+    row_to_update = next(row for row, d  in enumerate(sheet.col_values(1), start=1) if d == target_date)
+    sheet.update_cell(row_to_update, 2, list_accomplishments())
+
+
 if __name__ == "__main__":
     print("\nList your daily accomplishments below:\n")
-    update_sheet()
+    update_current_day()
     print("\nAll done!  Thanks!\n")
+
+
+# my_parser = argparse.ArgumentParser()
+# my_parser.add_argument('action', choices=['add', 'delete'])
+# args = my_parser.parse_args()
+# print(args.action)
