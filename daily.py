@@ -32,29 +32,39 @@ def list_accomplishments():
     return "\n".join(items)
 
 
-def update_current_day():
+def update(action: str, target_date: str = None):
     client = google_client()
     sheet = client.open("Daily Accomplishments").get_worksheet(0)
-    max_row = sheet.row_count
-    n = next(num for num in range(1, max_row) if not sheet.row_values(num))
-    sheet.update_acell(f"A{n}", f"{date.today():%Y-%m-%d}")
-    sheet.update_acell(f"B{n}", list_accomplishments())
-
-
-def delete_accomplishments(target_date: str):
-    client = google_client()
-    sheet = client.open("Daily Accomplishments").get_worksheet(0)
-    row_to_update = next(row for row, d  in enumerate(sheet.col_values(1), start=1) if d == target_date)
-    sheet.update_cell(row_to_update, 2, list_accomplishments())
+    if not target_date:
+        if action == "add":
+            print("\nList today's accomplishments below:\n")
+            max_row = sheet.row_count
+            n = next(num for num in range(1, max_row) if not sheet.row_values(num))
+            sheet.update_cell(n, 1, f"{date.today():%Y-%m-%d}")
+            sheet.update_cell(n, 2, list_accomplishments())
+        else: # target_date must be specified if action == "delete"
+            raise Exception("A date must be specified when deleting.  Please try again.")
+    else:
+        n = next(
+            row
+            for row, d in enumerate(sheet.col_values(1), start=1)
+            if d == target_date
+        )
+        if action == "add":
+            print(f"\nAdd to your accomplishments from {target_date}:\n")
+            old_text = sheet.cell(n, 2).value
+            updated_text = f"{old_text}\n{list_accomplishments()}"
+            sheet.update_cell(n, 2, updated_text)
+        else:
+            print(f"\nDeleting your accomplishments from {target_date} ...\n")
+            sheet.update_cell(n, 2, "")
 
 
 if __name__ == "__main__":
-    print("\nList your daily accomplishments below:\n")
-    update_current_day()
-    print("\nAll done!  Thanks!\n")
-
-
-# my_parser = argparse.ArgumentParser()
-# my_parser.add_argument('action', choices=['add', 'delete'])
-# args = my_parser.parse_args()
-# print(args.action)
+    my_parser = argparse.ArgumentParser()
+    my_parser.add_argument("action", choices=["add", "delete"])
+    my_parser.add_argument("-dt", action="store")
+    args = my_parser.parse_args()
+    action, target_date = vars(args).values()
+    update(action, target_date=target_date)
+    print("All done!  Thanks!\n")
